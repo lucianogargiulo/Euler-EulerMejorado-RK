@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Modelado</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body style="background-color:#bcc8d0;">
+
+<div class="container-fluid">
+  
+  <div class="text-center">
+    <h1>TP Modelado y Simulacion</h1>
+    <div class="container-fluid p-3 my-3 bg-dark text-white">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>
+            Metodo de Euler / Euler Mejorado / Runge Kutta
+          </h2>
+          <p>
+            Metodo de Euler: Procedimiento de integracion numerica para resolver ecuaciones diferenciales ordinarias (EDO) a partir de un valor inicial dado.
+          </p>
+          <p>
+            Metodo de Euler Mejorado: Consiste en tomar las formulas del metodo de Euler para calcular la pendiente en un punto inicial y en un punto final y luego promediarlas. De esta manera el resultado sera mucho mas acertado a lo largo de todo el intervalo.
+          </p>
+          <p>
+            Metodo de Runge Kutta: Es un conjunto de metodos iterativos (implicito y explicitos) para la aproximacion de soluciones de ecuaciones diferenciales ordinarias, concretamente, del problema de valor inicial.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h2>
+            Referencias
+          </h2>
+          <p>
+            Funcion: Es la funcion que se va a evaluar
+          </p>
+          <p>
+            X(0): Indica donde se empieza a calcular la aproximacion de la ecuacion diferencial
+          </p>
+          <p>
+            X final: Indica el ultimo punto del eje x que se va a evaluar
+          </p>
+          <p>
+            Y(0): Indica donde se empieza a calcular la aproximacion de la ecuacion diferencial
+          </p>
+          <p>
+            H: Es la distancia o tamaño de los pasos
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <form class="form-inline" action="{{ url_for("gfg")}}" method="post">
+      <form>
+        <div class="container">
+          <div class="row">
+
+              <div class="input-group mb-3">
+                <label for="inputF" class="col-sm-1 col-form-label">Funcion</label>
+                <input type="text" 
+                      class="form-control"
+                      id="input_f"
+                      name="funcion">
+
+                <label for="inputF" class="col-sm-1 col-form-label">X0</label>
+                <input type="number" 
+                      class="form-control" 
+                      id="input_x0"
+                      name="x0">
+
+                <label for="inputF" class="col-sm-1 col-form-label">X(n)</label>
+                <input type="number" 
+                      class="form-control" 
+                      id="input_xfinal"
+                      name="xfinal">
+
+                <label for="inputF" class="col-sm-1 col-form-label">Y0</label>
+                <input type="number" 
+                      class="form-control" 
+                      id="input_y0"
+                      name="y0">
+
+                <label for="inputF" class="col-sm-1 col-form-label">H</label>
+                <input type="number" 
+                      class="form-control" 
+                      id=input_h
+                      placeholder="1.00" step="0.01" min="0" max="10" 
+                      name="interval">
+              </div>
+
+          </div>
+          <div class="row">
+            <button type="submit" class="btn btn-secondary btn-lg">Procesar</button>
+          </div>
+        </div>        
+
+      </form>      
+    </form>
+
+
+
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+  </style>
+</head>
+
+<body style="background-color:#bcc8d0;">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="button"><a href="/">Volver</a></div>
+        
+        <div class="row g-3">
+          <div class="container-fluid p-3 my-3 bg-dark text-white">
+            <h2>
+              Resultado
+            </h2>
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <label for="inputF" class="col-sm-2 col-form-label">Funcion</label>
+                <input type="text" class="form-control" id="input_f" name="funcion" value={{ rtaFunc }} disabled>
+              </div>
+              <div class="input-group mb-3"> 
+                <label for="inputF" class="col-sm-2 col-form-label">X0</label>
+                <input type="number" class="form-control" id="input_x0" name="x0" value={{ rtaX0 }} disabled>
+              </div>
+              <div class="input-group mb-3"> 
+                <label for="inputF" class="col-sm-2 col-form-label">X</label>
+                <input type="number" class="form-control" id="input_xfinal" name="xfinal" value={{ rtaXfinal }} disabled>
+              </div>            
+              <div class="input-group mb-3">
+                <label for="inputF" class="col-sm-2 col-form-label">Y0</label>
+                <input type="number" class="form-control" id="input_y0" name="y0" value={{ rtaY0 }} disabled>
+              </div>
+              <div class="input-group mb-3">
+                <label for="inputF" class="col-sm-2 col-form-label">H</label>
+                <input type="number" class="form-control" id=input_h name="interval" value={{ rtaH }} disabled> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="data:image/jpeg;base64,{{ img_data }}" class="rounded">
+      </div>
+      <div class="col-md-6">
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
